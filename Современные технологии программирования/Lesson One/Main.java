@@ -3,7 +3,71 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
+    
+    private static void taskOne(){
+        System.out.println("Hello World");
+    }
 
+    private static void taskTwo(){
+        int num = 7;
+        System.out.println("Ответ: " + num);
+    }
+
+    private static void taskThree(){
+        int a = 0;
+        a += 1;
+        a = a + 1;
+        a = a + Integer.parseInt("1");
+        System.out.println("Ответ: " + a);
+    }
+
+    private static void taskFour(){
+        int b = 1, c = 2;
+        b = b + c - (c = b);
+
+        int d = b;
+        b = c;
+        c = d;
+        System.out.println("Ответ: \nb = " + b + ", c = " + c);
+    }
+
+    private static void taskFive(int a, int b){
+        System.out.println("Ответ: " + Math.sqrt(a*a + b*b));
+    }
+
+    private static void taskSix(int i){
+        System.out.println("Ответ: " + i % 10);
+    }
+
+    private static void taskSeven(int i){
+        String res = String.valueOf(i);
+        char ch = res.charAt(res.length() - 2);
+
+        System.out.println("Ответ: " + ch);
+    }
+
+    private static void taskEight(int i){
+        System.out.println("Ответ: " + i / 10);
+    }
+
+    private static int taskNine(int i){
+        return i - 21;
+    }
+
+    private static double taskTen(int a, int b){
+        return (a + b) / 2;
+    }
+
+    private static double taskEleven(int a, int b){
+        return Math.sqrt(a * b);
+    }
+
+    private static double taskTwelve(double Ax, double Ay,
+                                     double Bx, double By){
+
+        return Math.sqrt(Math.pow((Ax - Ay), 2) + Math.pow((Bx - By), 2));
+    }
+    
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -119,67 +183,4 @@ public class Main {
         }
     }
 
-    private static void taskOne(){
-        System.out.println("Hello World");
-    }
-
-    private static void taskTwo(){
-        int num = 7;
-        System.out.println("Ответ: " + num);
-    }
-
-    private static void taskThree(){
-        int a = 0;
-        a += 1;
-        a = a + 1;
-        a = a + Integer.parseInt("1");
-        System.out.println("Ответ: " + a);
-    }
-
-    private static void taskFour(){
-        int b = 1, c = 2;
-        b = b + c - (c = b);
-
-        int d = b;
-        b = c;
-        c = d;
-        System.out.println("Ответ: \nb = " + b + ", c = " + c);
-    }
-
-    private static void taskFive(int a, int b){
-        System.out.println("Ответ: " + Math.sqrt(a*a + b*b));
-    }
-
-    private static void taskSix(int i){
-        System.out.println("Ответ: " + i % 10);
-    }
-
-    private static void taskSeven(int i){
-        String res = String.valueOf(i);
-        char ch = res.charAt(res.length() - 2);
-
-        System.out.println("Ответ: " + ch);
-    }
-
-    private static void taskEight(int i){
-        System.out.println("Ответ: " + i / 10);
-    }
-
-    private static int taskNine(int i){
-        return i - 21;
-    }
-
-    private static double taskTen(int a, int b){
-        return (a + b) / 2;
-    }
-
-    private static double taskEleven(int a, int b){
-        return Math.sqrt(a * b);
-    }
-
-    private static double taskTwelve(double Ax, double Ay,
-                                     double Bx, double By){
-
-        return Math.sqrt(Math.pow((Ax - Ay), 2) + Math.pow((Bx - By), 2));
-    }
 }
