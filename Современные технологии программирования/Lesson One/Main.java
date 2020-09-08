@@ -39,14 +39,14 @@ public class Main {
         System.out.println("Ответ: " + i % 10);
     }
 
-    private static void taskSeven(int i){
+    private static void taskSeven(int i){ 
         String res = String.valueOf(i);
         char ch = res.charAt(res.length() - 2);
 
         System.out.println("Ответ: " + ch);
     }
 
-    private static void taskEight(int i){
+    private static void taskEight(int i){ //по сути то же самое, что и taskSeven.
         System.out.println("Ответ: " + i / 10);
     }
 
