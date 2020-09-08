@@ -21,14 +21,14 @@ class Matrix {
 
     // Сложение матриц
     int[][] addToMatrix(Matrix inputMatrix) throws Exception {
-        int[][] result = new int[getHeight()][getWidth()];
+        int[][] result = new int[height][width];
 
-        if ((getWidth() != inputMatrix.getWidth()) ||
-                getHeight() != inputMatrix.getHeight()) throw
+        if ((width != inputMatrix.width) ||
+                height!= inputMatrix.height) throw
                 new Exception("Матрицы имеют неодинаковые размеры!");
 
-        for (int i = 0; i < getHeight(); i++){
-            for (int j = 0; j < getWidth(); j++) {
+        for (int i = 0; i < height; i++){
+            for (int j = 0; j < width; j++) {
                 result[i][j] = getMatrix()[i][j] + inputMatrix.getMatrix()[i][j];
             }
         }
@@ -37,26 +37,26 @@ class Matrix {
 
     // Умножение матрицы на число
     int[][] mulByNumber(int number) {
-        int[][] result = new int[getHeight()][getWidth()];
-        for (int i = 0; i < getHeight(); i++){
-            for (int j = 0; j < getWidth(); j++) {
+        int[][] result = new int[height][width];
+        for (int i = 0; i < height; i++){
+            for (int j = 0; j < width; j++) {
                 result[i][j] = getMatrix()[i][j] * number;
             }
         } return result;
     }
 
-    // Умножение матриц / O(n^3)
+    // Умножение матрицы на матрицу / O(n^3)
     int[][] mulMatrixByMatrix(Matrix inputMatrix) throws Exception {
 
-        if ((getHeight() != inputMatrix.getWidth()) ||
-                getWidth() != inputMatrix.getHeight()) throw
+        if ((height != inputMatrix.width) ||
+                width != inputMatrix.height) throw
                 new Exception("Высота матрицы А не равна ширине матрицы Б, или наоборот");
 
         int[][] result = new int[
-                Math.min(getHeight(),
-                    inputMatrix.getHeight())][
-                            Math.min(getWidth(),
-                                    inputMatrix.getWidth())
+                Math.min(height,
+                    inputMatrix.height)][
+                            Math.min(width,
+                                    inputMatrix.width)
                 ];
 
         for (int i = 0; i < getMatrix().length; i++) {
@@ -68,9 +68,9 @@ class Matrix {
         } return result;
     }
 
-    // Получение трансп. матрицы
+    // Получить трансп. матрицу
     int[][] getTransMatrix() {
-        int[][] result = new int [getWidth()][getHeight()];
+        int[][] result = new int [width][height];
         for (int i = 0; i < getMatrix().length; i++)
             for (int j = 0; j < getMatrix()[0].length; j++)
                 result[j][i] = getMatrix()[i][j];
@@ -79,7 +79,7 @@ class Matrix {
 
     // Возведение матрицы в степень
     int[][] powMatrix(int power) throws Exception{
-        if (getWidth() != getHeight()) throw
+        if (width != height) throw
                 new Exception("Возводить в степень можно только квадратные матрицы.");
 
         int[][] result = getMatrix();
@@ -93,7 +93,10 @@ class Matrix {
         return result;
     }
 
-    // Ржачный метод для прикалывания
+    int[][] getMatrix() {
+        return matrix;
+    }
+
     private int[][] mulMatrixByMatrixInt(int[][] matrix, int[][] inMatrix){
         int[][] result = new int[matrix.length][matrix[0].length];
         for (int i = 0; i < matrix.length; i++) {
@@ -104,19 +107,6 @@ class Matrix {
             }
         }
         return result;
-    }
-    
-    // Приватные геттеры (за такое обычно отрывают руки)
-    private int getHeight() {
-        return height;
-    }
-
-    private int getWidth() {
-        return width;
-    }
-
-    int[][] getMatrix() {
-        return matrix;
     }
 
 }
