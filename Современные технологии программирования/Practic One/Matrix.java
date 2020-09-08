@@ -1,17 +1,17 @@
 //package com.company;
 
 class Matrix {
-    //private class's vars
+    // Private class's vars
     private int height, width;
     private int[][] matrix;
 
-    //constructor (h, w) --> m[h][w]
+    // Constructor (h, w) --> m[h][w]
     Matrix(int height, int width){
         this.height = height;
         this.width = width;
         this.matrix = new int[height][width];
 
-        //заполняем матрицу рандомными числами [0; 15]
+        // Заполняем матрицу рандомными числами [0; 15]
         for (int i = 0; i < height; i++){
             for (int j = 0; j < width; j++){
                 matrix[i][j] = (int) (Math.random() * 15);
@@ -19,7 +19,7 @@ class Matrix {
         }
     }
 
-    //сложение матриц
+    // Сложение матриц
     int[][] addToMatrix(Matrix inputMatrix) throws Exception {
         int[][] result = new int[getHeight()][getWidth()];
 
@@ -35,7 +35,7 @@ class Matrix {
         return result;
     }
 
-    //умножение матрицы на число
+    // Умножение матрицы на число
     int[][] mulByNumber(int number) {
         int[][] result = new int[getHeight()][getWidth()];
         for (int i = 0; i < getHeight(); i++){
@@ -45,7 +45,7 @@ class Matrix {
         } return result;
     }
 
-    // O(n^3)
+    // Умножение матриц / O(n^3)
     int[][] mulMatrixByMatrix(Matrix inputMatrix) throws Exception {
 
         if ((getHeight() != inputMatrix.getWidth()) ||
@@ -68,7 +68,7 @@ class Matrix {
         } return result;
     }
 
-    //получить трансп. матрицу
+    // Получение трансп. матрицы
     int[][] getTransMatrix() {
         int[][] result = new int [getWidth()][getHeight()];
         for (int i = 0; i < getMatrix().length; i++)
@@ -77,7 +77,7 @@ class Matrix {
         return result;
     }
 
-    // возведение матрицы в степень
+    // Возведение матрицы в степень
     int[][] powMatrix(int power) throws Exception{
         if (getWidth() != getHeight()) throw
                 new Exception("Возводить в степень можно только квадратные матрицы.");
@@ -93,19 +93,7 @@ class Matrix {
         return result;
     }
 
-    //приватные геттеры (за такое обычно отрывают руки)
-    private int getHeight() {
-        return height;
-    }
-
-    private int getWidth() {
-        return width;
-    }
-
-    int[][] getMatrix() {
-        return matrix;
-    }
-
+    // Ржачный метод для прикалывания
     private int[][] mulMatrixByMatrixInt(int[][] matrix, int[][] inMatrix){
         int[][] result = new int[matrix.length][matrix[0].length];
         for (int i = 0; i < matrix.length; i++) {
@@ -116,6 +104,19 @@ class Matrix {
             }
         }
         return result;
+    }
+    
+    // Приватные геттеры (за такое обычно отрывают руки)
+    private int getHeight() {
+        return height;
+    }
+
+    private int getWidth() {
+        return width;
+    }
+
+    int[][] getMatrix() {
+        return matrix;
     }
 
 }
