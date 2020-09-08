@@ -1,4 +1,5 @@
 //package com.company;
+//бесполезный класс (не нужен для задания)
 import java.util.Scanner;
 
 public class Main {
