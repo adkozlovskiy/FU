@@ -39,15 +39,15 @@ public class Main {
         System.out.println("Ответ: " + i % 10);
     }
 
-    private static void taskSeven(int i){ 
+    private static void taskSeven(int i){ //за такие приколы руки отрывают, но пусть будет. Адекватное решение в taskEight.
         String res = String.valueOf(i);
         char ch = res.charAt(res.length() - 2);
 
         System.out.println("Ответ: " + ch);
     }
 
-    private static void taskEight(int i){ //по сути то же самое, что и taskSeven.
-        System.out.println("Ответ: " + i / 10);
+    private static void taskEight(int i){ //решение подходит и для taskSeven.
+        System.out.println("Ответ: " + ((i % 100)/10);
     }
 
     private static int taskNine(int i){
