@@ -1,4 +1,4 @@
-package com.company;
+//package com.company;
 
 abstract class SolidOfRevolution extends Shape {
 
