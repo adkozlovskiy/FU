@@ -1,4 +1,4 @@
-//package com.company;
+package com.company;
 import java.util.Scanner;
 
 public class Main {
@@ -81,7 +81,7 @@ public class Main {
             }
     }
 
-    //красивый вывод матрицы
+    // Красивый вывод матрицы
     static private void printMatrix(int[][] matrix){
         for (int[] ints : matrix) {
             for (int j = 0; j < matrix[0].length; j++) {
