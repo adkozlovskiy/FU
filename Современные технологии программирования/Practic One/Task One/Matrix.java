@@ -1,4 +1,4 @@
-//package com.company;
+package com.company;
 
 class Matrix {
     // Private class's vars
