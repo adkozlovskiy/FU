@@ -45,18 +45,18 @@ public class Battle {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
             String answer;
             do {
-                // clear all data in ship class (actually for for repeated plays)
+
                 ComputersShips.clearAll();
                 PlayersShips.clearAll();
                 System.out.print("Хотите разместить корабли вручную? [Y/n] ");
                 answer = reader.readLine();
                 if ("y".equals(answer.toLowerCase()) || "".equals(answer)) {
-                    //manually placing players ships on the field
+
                     manualPlacingPlayersShips(reader);
                 } else
-                    //generate players ships on the field
+
                     generatePlayersShips();
-                //generate computers ships on the field
+
                 generateComputersField();
 
                 // Turn-Based game
@@ -76,7 +76,7 @@ public class Battle {
     }
 
     private static void manualPlacingPlayersShips(BufferedReader reader) throws IOException {
-        //clear the field, fill with space character
+
         for (int i = 0; i < sizeOfField; i++) {
             for (int j = 0; j < sizeOfField; j++) {
                 playerField[i][j] = 32;
@@ -90,7 +90,7 @@ public class Battle {
     }
 
     private static void generateComputersField() {
-        //clear the field, fill with space character
+
         for (int i = 0; i < sizeOfField; i++) {
             for (int j = 0; j < sizeOfField; j++) {
                 computerField[i][j] = 32;
@@ -103,7 +103,7 @@ public class Battle {
     }
 
     private static void generatePlayersShips() {
-        //clear the field, fill with space character
+
         for (int i = 0; i < sizeOfField; i++) {
             for (int j = 0; j < sizeOfField; j++) {
                 playerField[i][j] = 32;
@@ -116,7 +116,7 @@ public class Battle {
     }
 
     private static void manuallyCreatePlayersShip(BufferedReader reader, int countOfDecker, int maxCountOfShip) throws IOException {
-        //count of created ships
+
         int countOfShip = countOfDecker == 1 ? PlayersShips.countOfSubmarine : countOfDecker == 2 ?
                 PlayersShips.countOfDestroyer : countOfDecker == 3 ? PlayersShips.countOfCruiser : PlayersShips.countOfBattleShip;
 
@@ -148,24 +148,24 @@ public class Battle {
                 manuallyCreatePlayersShip(reader, countOfDecker, maxCountOfShip);
                 break;
             }
-            // Check coordinates, that they valid
+ 
             if ((number < 0 || number > sizeOfField - 1 ) || (letter < 0 || letter > sizeOfField - 1)){
                 System.out.println("Ошибка в вводе.");
                 manuallyCreatePlayersShip(reader, countOfDecker, maxCountOfShip);
                 break;
             }
-            //If creating ship is battleship, or Cruise, or Destroyer
+
             if (countOfDecker > 1) {
                 //If we have directions parameter
                 if (param.length > 1) {
                     char direction = param[1].charAt(0);
-                    // Check the direction
+                
                     if (direction != 'n' && direction != 'e' && direction != 's' && direction != 'w'){
                         System.out.println("Неверное направление.");
                         manuallyCreatePlayersShip(reader, countOfDecker, maxCountOfShip);
                         break;
                     }
-                    // create ship and set parameters
+        
                     PlayersShips playersShip = new PlayersShips();
                     playersShip.setShip(direction, countOfDecker, number, letter);
                     printPlayersField();
@@ -175,9 +175,9 @@ public class Battle {
                     manuallyCreatePlayersShip(reader, countOfDecker, maxCountOfShip);
                     break;
                 }
-                // If creating ship is Submarine
+
             } else {
-                // create submarine and set parameters
+     
                 PlayersShips playersShip = new PlayersShips();
                 playersShip.setShip(number, letter);
                 printPlayersField();
@@ -187,26 +187,26 @@ public class Battle {
     }
 
     private static void createPlayersShip(int countOfDecker, int maxCountOfShip) {
-        //generate players ships on the field
+
         int countOfShip = countOfDecker == 1 ? PlayersShips.countOfSubmarine : countOfDecker == 2 ?
                 PlayersShips.countOfDestroyer : countOfDecker == 3 ? PlayersShips.countOfCruiser : PlayersShips.countOfBattleShip;
 
         while (countOfShip < maxCountOfShip) {
-            // generate coordinates
+   
             int randomNumber = (int) (Math.random() * sizeOfField);
             int randomLetter = (int) (Math.random() * sizeOfField);
-            // generate coordinates
+           
             if (countOfDecker > 1) {
                 int randomDirection = (int) (Math.random()*4);
                 char direction = randomDirection == 0 ? 'n': randomDirection == 1 ? 'e': randomDirection == 2 ? 's': 'w';
-                // create ship and set parameters
+          
                 PlayersShips ship = new PlayersShips();
                 ship.setShip(direction, countOfDecker, randomNumber, randomLetter);
                 countOfShip = countOfDecker == 2 ? PlayersShips.countOfDestroyer : countOfDecker == 3 ?
                         PlayersShips.countOfCruiser : PlayersShips.countOfBattleShip;
 
             } else {
-                // create submarine and set parameters
+              
                 PlayersShips ship = new PlayersShips();
                 ship.setShip(randomNumber, randomLetter);
                 countOfShip = PlayersShips.countOfSubmarine;
@@ -215,26 +215,26 @@ public class Battle {
     }
 
     private static void createComputersShip(int countOfDecker, int maxCountOfShip){
-        //generate computers ships on the field
+
         int countOfShip = countOfDecker == 1 ? ComputersShips.countOfSubmarine : countOfDecker == 2 ?
                 ComputersShips.countOfDestroyer : countOfDecker == 3 ? ComputersShips.countOfCruiser : ComputersShips.countOfBattleShip;
 
         while (countOfShip < maxCountOfShip) {
-            // generate coordinates
+       
             int randomNumber = (int) (Math.random() * sizeOfField);
             int randomLetter = (int) (Math.random() * sizeOfField);
-            // generate coordinates
+         
             if (countOfDecker > 1) {
                 int randomDirection = (int) (Math.random()*4);
                 char direction = randomDirection == 0 ? 'n': randomDirection == 1 ? 'e': randomDirection == 2 ? 's': 'w';
-                // create ship and set parameters
+               
                 ComputersShips ship = new ComputersShips();
                 ship.setShip(direction, countOfDecker, randomNumber, randomLetter);
                 countOfShip = countOfDecker == 2 ? ComputersShips.countOfDestroyer : countOfDecker == 3 ?
                         ComputersShips.countOfCruiser : ComputersShips.countOfBattleShip;
 
             } else {
-                // create submarine and set parameters
+               
                 ComputersShips ship = new ComputersShips();
                 ship.setShip(randomNumber, randomLetter);
                 countOfShip = ComputersShips.countOfSubmarine;
@@ -298,7 +298,7 @@ public class Battle {
             System.out.print("Сделай ход: ");
             String fire = reader.readLine();
 
-            // exit for exit from game.
+         
             if ("exit".equals(fire.toLowerCase())) {
                 System.exit(0);
             }
