@@ -1,4 +1,4 @@
-<img src="https://github.com/whiititi/docs/blob/master/fa.png?raw=true" alt="FA"/> <img src="https://github.com/whiititi/docs/blob/master/logo.jpg?raw=true" alt="FA"/>
+<img src="https://github.com/whiititi/docs/blob/master/fa.png?raw=true" alt="FA"/> <img src="https://github.com/whiititi/docs/blob/master/logo.png?raw=true" alt="FA"/>
 
 ### Практики Финансового университета при Правительстве РФ ###
 
