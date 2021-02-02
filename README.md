@@ -1,4 +1,4 @@
-<img src="https://github.com/whiititi/docs/blob/master/fa.png?raw=true" alt="FA"/> <img src="https://github.com/whiititi/docs/blob/master/logo.png?raw=true" alt="FA"/>
+<img src="https://github.com/whiititi/docs/blob/master/fa.png?raw=true" alt="FA"/>
 
 ### Practices of the Financial University under the Government of the Russian Federation ###
 
