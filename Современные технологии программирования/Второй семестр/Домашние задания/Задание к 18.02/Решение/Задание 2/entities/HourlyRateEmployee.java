@@ -9,6 +9,12 @@ public class HourlyRateEmployee extends Employee {
         this.hourlyRate = hourlyRate;
     }
 
+    /**
+     * Метод, рассчитывающий заработную плату сотрудника с фиксированной ставкой.
+     *
+     * @return зарплату, расчитанную по формуле 20.8 * 8 * часовую ставку.
+     */
+    
     @Override
     public double calculateSalary() {
         return 20.8 * 8 * hourlyRate;
