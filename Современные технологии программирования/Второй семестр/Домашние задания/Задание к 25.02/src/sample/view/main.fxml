@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="350.0" prefWidth="600.0" styleClass="background" stylesheets="@style.css"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.controller.PersonController">
+    <SplitPane dividerPositions="0.3210702341137124" layoutX="183.0" layoutY="50.0" prefHeight="300.0"
+               prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="196.0">
+            <TableView fx:id="personTable" layoutX="-39.0" layoutY="14.0" prefHeight="298.0"
+                       prefWidth="175.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                       AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <columns>
+                    <TableColumn fx:id="firstNameColumn" prefWidth="75.0" text="Имя"/>
+                    <TableColumn fx:id="lastNameColumn" prefWidth="75.0" text="Фамилия"/>
+                </columns>
+                <columnResizePolicy>
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                </columnResizePolicy>
+            </TableView>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="329.0">
+            <GridPane layoutX="13.0" layoutY="23.0" prefHeight="240.0" prefWidth="399.0"
+                      AnchorPane.bottomAnchor="85.0" AnchorPane.leftAnchor="10.0"
+                      AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                </rowConstraints>
+                <Label text="Имя"/>
+                <Label text="Фамилия" GridPane.rowIndex="1"/>
+                <Label text="Улица" GridPane.rowIndex="2"/>
+                <Label text="Город" GridPane.rowIndex="3"/>
+                <Label text="Почтовый индекс" GridPane.rowIndex="4"/>
+                <Label text="Дата рождения" GridPane.rowIndex="5"/>
+                <Label fx:id="firstNameLabel" text="Label" GridPane.columnIndex="1"/>
+                <Label fx:id="lastNameLabel" text="Label" GridPane.columnIndex="1"
+                       GridPane.rowIndex="1"/>
+                <Label fx:id="streetLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                <Label fx:id="cityLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                <Label fx:id="postalCodeLabel" text="Label" GridPane.columnIndex="1"
+                       GridPane.rowIndex="4"/>
+                <Label fx:id="birthdayLabel" text="Label" GridPane.columnIndex="1"
+                       GridPane.rowIndex="5"/>
+            </GridPane>
+            <Label layoutX="10.0" layoutY="15.0" styleClass="text-primary-h1" text="Персональные данные"/>
+            <HBox layoutX="247.0" layoutY="259.0" spacing="12.0" AnchorPane.bottomAnchor="30.0"
+                  AnchorPane.rightAnchor="15.0">
+                <Button mnemonicParsing="false" onAction="#handleNewAction" styleClass="button"
+                        text="Добавить"/>
+                <Button mnemonicParsing="false" onAction="#handleEditAction" styleClass="button"
+                        text="Изменить"/>
+                <Button mnemonicParsing="false" onAction="#handleDeleteAction" styleClass="button"
+                        text="Удалить"/>
+            </HBox>
+        </AnchorPane>
+    </SplitPane>
+</AnchorPane>
