@@ -1,0 +1,10 @@
+com/kozlovskiy/demo/service/BlogService.java
+ com.kozlovskiy.demo.service.BlogService
+com/kozlovskiy/demo/model/Blog.java
+ com.kozlovskiy.demo.model.Blog
+com/kozlovskiy/demo/repo/BlogRepo.java
+ com.kozlovskiy.demo.repo.BlogRepo
+com/kozlovskiy/demo/MainApplication.java
+ com.kozlovskiy.demo.MainApplication
+com/kozlovskiy/demo/controller/BlogController.java
+ com.kozlovskiy.demo.controller.BlogController
