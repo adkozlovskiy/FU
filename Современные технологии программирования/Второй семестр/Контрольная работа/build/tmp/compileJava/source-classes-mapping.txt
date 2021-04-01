@@ -1,0 +1,26 @@
+kozlovskiy/project/repo/TaskRepo.java
+ kozlovskiy.project.repo.TaskRepo
+kozlovskiy/project/ProjectApplication.java
+ kozlovskiy.project.ProjectApplication
+kozlovskiy/project/repo/UserRepo.java
+ kozlovskiy.project.repo.UserRepo
+kozlovskiy/project/repo/CategoryRepo.java
+ kozlovskiy.project.repo.CategoryRepo
+kozlovskiy/project/models/Category.java
+ kozlovskiy.project.models.Category
+kozlovskiy/project/controllers/CategoryController.java
+ kozlovskiy.project.controllers.CategoryController
+kozlovskiy/project/models/Task.java
+ kozlovskiy.project.models.Task
+kozlovskiy/project/controllers/TaskController.java
+ kozlovskiy.project.controllers.TaskController
+kozlovskiy/project/controllers/UserController.java
+ kozlovskiy.project.controllers.UserController
+kozlovskiy/project/models/User.java
+ kozlovskiy.project.models.User
+kozlovskiy/project/services/TaskService.java
+ kozlovskiy.project.services.TaskService
+kozlovskiy/project/services/CategoryService.java
+ kozlovskiy.project.services.CategoryService
+kozlovskiy/project/services/UserService.java
+ kozlovskiy.project.services.UserService
