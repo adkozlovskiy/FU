@@ -30,7 +30,7 @@ Rest-приложение с использованием фреймворка S
 #### Стартовый экран, экраны регистрации и авторизации
 ![image](https://user-images.githubusercontent.com/69580767/117139359-d4bff300-adb4-11eb-893c-d983823c295a.png)   ![image](https://user-images.githubusercontent.com/69580767/117140858-890e4900-adb6-11eb-9e12-d35b05678225.png)   ![image](https://user-images.githubusercontent.com/69580767/117141622-6e889f80-adb7-11eb-9277-1a9b16721520.png)
 
-#### Главный экран и фрагменты фильмов в прокате, истории чеков (есть нормальный скриншот, но я обязан показать это приведение) и профиля
+#### Главный экран и фрагменты фильмов в прокате, истории чеков и профиля
 ![image](https://user-images.githubusercontent.com/69580767/117141069-ca065d80-adb6-11eb-9287-92a4744b844e.png)
   ![image](https://user-images.githubusercontent.com/69580767/117141132-ddb1c400-adb6-11eb-8efa-0cb6b6cb330b.png) ![image](https://user-images.githubusercontent.com/69580767/117141016-bb1fab00-adb6-11eb-81a9-7d5582f0b93b.png)   
 
